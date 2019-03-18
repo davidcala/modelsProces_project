@@ -1,7 +1,20 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-
+from AppTask import models
 # Create your views here.
 def home(request):
-    return HttpResponse("Hola Mundo este es el Home", "home.html")
+    return render(request, 'home.html')
 
+
+def categories(request):
+    categories = models.Category.objects.all()
+
+    return render(request, 'categories.html', {
+        'categories': categories,
+    })
+
+def tags(request):
+    tags= models.Tag.objects.all()
+
+    return render(request, 'tags.html', {
+        'tags': tags,
+    })

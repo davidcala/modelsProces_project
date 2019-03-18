@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+Categories: <br>
+{% for category in categories %}
+{{ category.name }}<br>
+{% endfor%}
+
+<p><a href="{% url 'home' %}">Go back to home</a></p>
+</body>
+</html>
