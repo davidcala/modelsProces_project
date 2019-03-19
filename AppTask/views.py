@@ -18,3 +18,4 @@ def tags(request):
     return render(request, 'tags.html', {
         'tags': tags,
     })
+

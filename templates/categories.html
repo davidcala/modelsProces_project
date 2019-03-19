@@ -10,6 +10,16 @@ Categories: <br>
 {{ category.name }}<br>
 {% endfor%}
 
+<h1>Create a new Category </h1>
+<form action="" method="POST">
+{% csrf_token %}
+Category: <input type="text" name="title"/><br/>
+Description: <br/>
+<textarea cols="35" rows="8" name="description">
+</textarea><br/>
+<input type="submit" value="Enter"/>
+</form>
+
 <p><a href="{% url 'home' %}">Go back to home</a></p>
 </body>
 </html>
