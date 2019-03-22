@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><Products></Products></title>
+</head>
+<body>
+
+
+<table class="'egt">
+
+<tr>
+    <th>Name: </th>
+    <td>{{ product.name }}</td>
+</tr>
+<tr>
+    <th>Category: </th>
+    <td><a href="{% url 'categoriesdetail' id=product.category.id %}"> {{ product.category}} </a></td>
+
+</tr>
+<tr>
+    <th>Price: </th>
+    <td>{{ product.price }} €</td>
+</tr>
+<tr>
+    <th>Stock available: </th>
+    <td>{{ product.stock}}</td>
+</tr>
+
+</table>
+
+
+
+
+<p><a href="{% url 'home' %}">Go back to our list of products</a></p>
+
+</body>
+</html>

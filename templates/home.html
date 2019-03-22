@@ -5,11 +5,20 @@
     <title>Welcome</title>
 </head>
 <body>
+
+<h2>TOTAL SPORTS</h2>
 This is our product list:
 
-<p>- <a href="{% url 'product1' %}">Product 1</a></p>
+{% for product in productos %}
 
-<p>- <a href="{% url 'product2' %}">Product 2</a></p>
+<p>- <a href="{% url 'productdetail' id=product.id %}"> {{ product.name }} </a></p>
+
+{% endfor%}
+
+
+<br>
+<br>
+<p><a href="{% url 'categories' %}">Categories</a></p>
 
 </body>
 </html>
