@@ -22,8 +22,7 @@ class Category(Entity):
 
     name = models.CharField(verbose_name=_("Nombre"), max_length=50)
     description = models.TextField(verbose_name=_("Descripción"), default='', blank=True)
-    parent = models.ForeignKey('self', verbose_name=_("Categoría Padre"), related_name='parent_category', null=True,
-                               blank=True, on_delete=models.CASCADE)
+
 
     class Meta:
         verbose_name = 'Categoría'
@@ -41,7 +40,6 @@ class Tag(Entity):
     """
 
     name = models.CharField(verbose_name=_("Nombre"), max_length=50)
-    description = models.TextField(verbose_name=_("Descripción"), default='', blank=True)
     description = models.TextField(verbose_name=_("Descripción"), default='', blank=True)
 
     class Meta:
